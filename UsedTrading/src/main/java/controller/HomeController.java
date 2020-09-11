@@ -1,4 +1,4 @@
-package com.cswhomepage.usedtrading;
+package controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -35,5 +35,8 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@RequestMapping(value = "/board/")
+	public void board() {}
 	
 }
