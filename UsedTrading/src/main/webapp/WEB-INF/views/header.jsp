@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="${cpath }/css/main.css" rel="stylesheet" type="text/css">
+<link href="${cpath }/css/board.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${cpath }/js/JSmain.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="${cpath }/js/JSmain.js"></script>
-
