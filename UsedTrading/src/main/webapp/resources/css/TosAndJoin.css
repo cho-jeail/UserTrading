@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	max-width: 1300px;
+	margin: auto;
+}
+
+/*----------- 이용약관 -------------*/
+
+.TosMain{
+	border: 1px solid black;
+	width: 400px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+}
+
+.TOSContents{
+	width: 100%;
+	height: 500px;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+.agreeTOSDiv{
+	width: 180px;
+	text-align: right;
+	margin: 0 0 10px auto;
+}
+
+
+
+/*----------- 회원가입 -------------*/
+
+.joinMain{
+	border: 1px solid black;
+	width: 400px;
+	height: 600px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+}
+

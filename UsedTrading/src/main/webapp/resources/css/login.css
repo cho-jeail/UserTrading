@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	max-width: 1300px;
+	margin: auto;
+}
+
+.loginMain{
+	border: 1px solid black;
+	width: 380px;
+	margin: 200px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px 0 20px 0;
+}
+
+.loginMainLogo{
+	border: 1px solid black;
+	width: 80%;
+	height: 60px;
+	margin: 0 auto 20px auto;
+	
+}
+
+.loginMainDiv{
+	border: 1px solid black;
+	width: 80%;
+	margin: 0 auto auto auto;
+}
+
+.loginMainForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.loginMainForm .loginFormId, .loginFormPw{
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.loginFormPw{
+	margin-top: 10px;
+}
+
+.userId{
+	width: 100%;
+	height: 100%;
+	line-height : normal; 
+	padding: .5em .5em;
+	border: 1;
+}
+
+.userPw{
+	width: 100%;
+	height: 100%;
+	line-height : normal; 
+	padding: .5em .5em;
+}
+
+.loginSend{
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.loginSend input{
+	width: 100%;
+	height: 100%;
+}
+
+.saveUserIdDiv{
+	margin: 10px auto 10px 0;
+}
+
+.searchIdPwAndJoin{
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.searchIdPwAndJoin a{
+	text-decoration: none;
+}
+
+.JoinDiv{
+	margin-left: 20px;
+}
+
+.userId:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.userId:focus::-moz-placeholder {
+  color: transparent;
+}
+.userId:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.userId:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.userPw:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.userPw:focus::-moz-placeholder {
+  color: transparent;
+}
+.userPw:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.userPw:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
