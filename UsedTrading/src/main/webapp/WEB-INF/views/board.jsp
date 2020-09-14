@@ -10,34 +10,21 @@
 	<!-- 검색창 -->
 	<div class="SearchDiv">
 		<input type="text" id="SearchWord" placeholder="검색">
-		<a href="javascript:void(0)" onclick="">
-			<img alt="" src="">
-		</a>
+		<img alt="" src="">
 	</div>
 	
 	<!-- 상단 메뉴(대분류) -->
 	<div class="TopMenuVar">
-		<span>
-			<a href="#">대분류 1</a>
-		</span>
-		<span>
-			<a href="#">대분류 2</a>
-		</span>
-		<span>
-			<a href="#">대분류 3</a>
-		</span>
-		<span>
-			<a href="#">대분류 4</a>
-		</span>
-		<span>
-			<a href="#">대분류 5</a>
-		</span>
-		<span>
-			<a href="#">대분류 6</a>
-		</span>
+		<ul>
+			<li>대분류 1</li>
+			<li>대분류 2</li>
+			<li>대분류 3</li>
+			<li>대분류 4</li>
+			<li>대분류 5</li>
+			<li>대분류 6</li>
+		</ul>
 	</div>
 </div>
-
 <!-- 사이드 메뉴와 리스트 포함 -->
 <div>
 	<!-- 
@@ -46,10 +33,10 @@
 	 -->
 	<div class="BoardSideMenu">
 		<!-- 게시판 모음 -->
-		<div>
+		<div class="SynthesisBoard">
 			<ul type="disc">
 				<li><a href="#">공지사항</a></li>
-				<li><a href="#">신고 계시판</a></li>
+				<li><a href="#">신고 게시판</a></li>
 				<li><a href="#">자유 게시판</a></li>
 			</ul>
 		</div>
