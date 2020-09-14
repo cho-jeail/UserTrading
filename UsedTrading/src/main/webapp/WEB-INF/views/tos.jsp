@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
-<script type="text/javascript" src="${cpath }/js/TosAadJoin.js"></script>
+
 <link href="${cpath }/css/TosAndJoin.css" rel="stylesheet" type="text/css">
 <main class="TosMain">
 	
@@ -15,6 +15,6 @@
 	</div>
 	
 </main>
-
+<script type="text/javascript" src="${cpath }/js/TosAadJoin.js"></script>
 </body>
 </html>
