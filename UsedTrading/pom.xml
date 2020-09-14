@@ -133,10 +133,16 @@
 		</dependency>
 		
 		<!-- Oracle JDBC Driver --> 
-		<dependency> 
-			<groupId>com.oracle</groupId> 
-			<artifactId>ojdbc6</artifactId> 
-			<version>12.1.0.1</version> 
+		<dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc10</artifactId>
+                <version>19.7.0.0</version>
+        </dependency>
+        
+        <dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
 		</dependency>
 		
 		<!-- Mybatis -->
