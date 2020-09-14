@@ -16,6 +16,7 @@
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px;
+	color: black;
 }
 
 .TOSContents{
@@ -44,5 +45,9 @@
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px;
+}
+
+.joinPhoneDiv input{
+	width: 60px; 
 }
 
