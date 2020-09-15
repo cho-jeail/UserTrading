@@ -14,9 +14,9 @@
 		
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 	 	<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
-	 	<property name="jdbcUrl" value="jdbc:oracle:thin:@kdb.clt8hhvqgrrw.ap-northeast-2.rds.amazonaws.com:1521:ORCL"/>
-     	<property name="user" value="kimsw909"/>
-      	<property name="password" value="tkddn463746"/>
+	 	<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.35.80:1521:cdb1"/>
+     	<property name="user" value="c##home"/>
+      	<property name="password" value="1"/>
    	   	<property name="maxPoolSize" value="100"/>
 		<property name="maxIdleTime" value="600"/>
 	  	<property name="idleConnectionTestPeriod" value="300"/>

@@ -5,6 +5,6 @@
 	
 <mapper namespace="dao.TestDAO">
 	<select id="find" resultType="String">
-		select * from TEST where name = #{name}
+		select * from TEST where success= #{success}
 	</select>
 </mapper>
