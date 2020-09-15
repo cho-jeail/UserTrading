@@ -1,6 +1,6 @@
 package dao;
 
 public interface TestDAO {
-	String find(String name);
+	String find(String success);
 
 }

@@ -14,8 +14,8 @@ public class TestController {
 	
 	@RequestMapping(value = "test/", method = RequestMethod.GET)
 	public String test() {
-		String name = "성공";
-		System.out.println(ts.find(name));
+		String success = "성공";
+		System.out.println(ts.find(success));
 		
 		return "test";
 	}

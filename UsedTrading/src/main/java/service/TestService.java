@@ -10,7 +10,7 @@ public class TestService {
 	
 	@Autowired private TestDAO td;
 
-	public String find(String name) {
-		return td.find(name);
+	public String find(String success) {
+		return td.find(success);
 	}
 }
