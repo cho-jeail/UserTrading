@@ -26,7 +26,7 @@
 	</div>
 </div>
 <!-- 사이드 메뉴와 리스트 포함 -->
-<div>
+<div style="display: flex; flex-direction: row; height: 1100px;">
 	<!-- 
 		사이드 메뉴(소분류)
 		자유 게시판, 신고 게시판, 공지사항 게시판
@@ -34,7 +34,7 @@
 	<div class="BoardSideMenu">
 		<!-- 게시판 모음 -->
 		<div class="SynthesisBoard">
-			<ul type="disc">
+			<ul>
 				<li><a href="#">공지사항</a></li>
 				<li><a href="#">신고 게시판</a></li>
 				<li><a href="#">자유 게시판</a></li>
@@ -42,8 +42,8 @@
 		</div>
 		
 		<!-- 상품 -->
-		<div>
-			<ul style="list-style: none;">
+		<div class="CategoryBoard">
+			<ul>
 				<li>
 					대분류 1
 					<ul>
@@ -113,12 +113,12 @@
 	<!-- 리스트 -->
 	<div class="BoardList">
 		<!-- 공지 사항 -->
-		<div>
+		<div class="NoticeBoard">
 			
 		</div>
 		
 		<!-- 상품 리스트 -->
-		<div>
+		<div class="ItemList">
 			
 		</div>
 	</div>

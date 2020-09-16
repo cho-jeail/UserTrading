@@ -73,10 +73,50 @@
 	width: 200px;
 	background: gray;
 	margin: 0px;
+	border-right: 3px solid black;
+}
+.BoardSideMenu a:link, a:active, a:visited {
+	text-decoration: none;
+	color: black;
+}
+.BoardSideMenu a:hover {
+	font-weight: bolder;
+	color: blue;
+	text-decoration: none;
 }
 
-.SynthesisBoard {
+.SynthesisBoard, .CategoryBoard {
 	width: 80%;
 	background-color: #F5D0A9;
 	margin: 20px auto;
+}
+.SynthesisBoard ul {
+	list-style: disc;
+	padding-left: 30px;
+}
+
+.CategoryBoard {
+	margin-top: 0px;
+}
+.CategoryBoard ul {
+	padding: 0px 15px; 
+	list-style: none;
+}
+.CategoryBoard ul li {
+	border-bottom: 2px solid gray;
+	padding: 10px 0px;
+}
+.CategoryBoard ul li ul {
+	padding-left: 30px;
+	list-style: circle;
+}
+.CategoryBoard ul li ul li {
+	border: 0px;
+	padding: 0px;
+}
+
+.BoardList {
+	background: gray;
+	width: 1097px;
+	height: 100%;
 }
