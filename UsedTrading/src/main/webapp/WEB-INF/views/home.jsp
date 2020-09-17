@@ -16,7 +16,7 @@
 	
 	<!-- 로그인 기능 -->
 	<div style="border: 1px solid gold; float: left; width: 9%; height: 100%;">
-		<a href="{cpath}/login/">로그인</a>
+		<a href="${cpath}/login/">로그인</a>
 	</div>
 </div>
 <div>

@@ -1,6 +1,7 @@
 let checkedTos = document.getElementById('agreeTOS');	// 약관 동의 체크
 let herfpath = document.location.href;	// 로컬 주소
 let path = herfpath.replace(document.location.pathname, '/usedtrading/'); // 주소변환
+let joinName = document.getElementById('joinName');
 let joinUserId = document.getElementById('joinUserId');
 let joinUserPw = document.getElementById('joinUserPw');
 let joinComfirmPw = document.getElementById('joinComfirmPw');
@@ -86,6 +87,7 @@ function nameRegexp(){
 		nameReg = false;
 	}
 	else{
+		joinName.style.border = '1px solid black';
 		document.getElementById('joinNameComfirmMsg').innerText = '';
 		nameReg = true;
 	}
@@ -95,12 +97,13 @@ function nameRegexp(){
 function idRegexp(){
 	const idRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z]){4,19}$/;
 	if(idRegExp.test(joinUserId.value) === false){
-		document.getElementById('joinIdComfirmMsg').innerText = '5~20자, 특수문자(-_.)만 사용가능합니다.';
+		document.getElementById('joinIdComfirmMsg').innerText = '5~20자, 특수문자(- _ .)만 사용가능합니다.';
 		document.getElementById('joinIdComfirmMsg').style.color = 'red';
 		idReg = false;
 	}
 	else{
 		document.getElementById('joinIdComfirmMsg').innerText = '';
+		joinUserId.style.border = '1px solid black';
 		idReg = true;
 	}
 }
@@ -108,46 +111,50 @@ function idRegexp(){
 // 비밀번호 정규 표현식
 function passwordRegexp(){
 	const regExp1 = /^.*(?=^.{8,20}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
-	
 	pw = joinUserPw.value;
 	if(regExp1.test(pw) === false){
 		document.getElementById('joinPwComfirmMsg').innerText = '비밀번호 형식이 맞지 않습니다.'
-		joinUserPw.focus();
+		document.getElementById('joinPwComfirmMsg').style.color = 'red';
 		pwReg = false;
 	}
 	else{
-		document.getElementById('joinPwComfirmMsg').innerText = '사용가능합니다'
+		document.getElementById('joinPwComfirmMsg').innerText = '사용가능합니다.'
 		document.getElementById('joinPwComfirmMsg').style.color = 'blue';
+		joinUserPw.style.border = '1px solid black';
 		pwReg = true;
 	}
 }
 
 // 비밀번호 확인
 function passwordCheck(){
-	if(joinUserPw.value === joinComfirmPw.value){
-		document.getElementById('joinCPwComfirmMsg').innerText = '비밀번호가 일치합니다'
-		document.getElementById('joinCPwComfirmMsg').style.color = 'blue';
-		pwChk = true;	
+	if(joinUserPw.value !== joinComfirmPw.value){
+		document.getElementById('joinCPwComfirmMsg').innerText = '일치하지 않습니다.'
+		document.getElementById('joinCPwComfirmMsg').style.color = 'red';
+		pwChk = false;
+	}
+	else if(joinComfirmPw.value === ''){
+		document.getElementById('joinCPwComfirmMsg').innerText = '작성되지 않았습니다.'
+		document.getElementById('joinCPwComfirmMsg').style.color = 'red';
+		pwChk = false;
 	}
 	else{
-		document.getElementById('joinCPwComfirmMsg').innerText = '비밀번호가 일치하지 않습니다'
-		document.getElementById('joinCPwComfirmMsg').style.color = 'red';
-		joinComfirmPw.focus();
-		pwChk = false;
+		document.getElementById('joinCPwComfirmMsg').innerText = '일치합니다.'
+		document.getElementById('joinCPwComfirmMsg').style.color = 'blue';
+		joinComfirmPw.style.border = '1px solid black';
+		pwChk = true;	
 	}
 }
 
 // 전화번호 확인
 function phoneNumberCheck(){
-	console.log('obj : ' + this.value);
 	const regExp2 = /^[0-9]*$/;
 	if(regExp2.test(this.value) === false){
-		document.getElementById('joinPhoneComfirmMsg').innerText = '숫자만 작성해 주세요';
+		document.getElementById('joinPhoneComfirmMsg').innerText = '숫자만 작성해 주세요.';
 		document.getElementById('joinPhoneComfirmMsg').style.color = 'red';
-		this.focus();
 	}
 	else{
 		document.getElementById('joinPhoneComfirmMsg').innerText = '';
+		this.style.border = '1px solid black';
 	}
 }
 
@@ -171,15 +178,14 @@ function selectOpts(){
 //이메일 정규표현식1
 function EmailCheck1(){
 	const regExp3 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])/i;
-	console.log(regExp3.test(joinEmail1.value));
 	if(regExp3.test(joinEmail1.value) === false){
 		document.getElementById('joinEmailComfirmMsg').innerText = '이메일 형식이 맞지 않습니다.'
 		document.getElementById('joinEmailComfirmMsg').style.color = 'red';
-		joinEmail1.focus();
 		email1Reg = false;
 	}
 	else{
 		document.getElementById('joinEmailComfirmMsg').innerText = '';
+		joinEmail1.style.border = '1px solid black';
 		email1Reg = true;
 	}
 }
@@ -190,11 +196,11 @@ function EmailCheck2(){
 	if(regExp4.test(joinEmail2.value) === false){
 		document.getElementById('joinEmailComfirmMsg').innerText = '이메일 형식이 맞지 않습니다.'
 		document.getElementById('joinEmailComfirmMsg').style.color = 'red';
-		joinEmail2.focus();
 		mail2Reg = false;
 	}
 	else{
 		document.getElementById('joinEmailComfirmMsg').innerText = '';
+		joinEmail2.style.border = '1px solid black';
 		mail2Reg = true;
 	}
 }
