@@ -38,8 +38,8 @@
 
 .joinMain{
 	border: 1px solid black;
-	width: 400px;
-	height: 600px;
+	width: 500px;
+	height: 700px;
 	margin: 100px auto;
 	display: flex;
 	flex-direction: column;
@@ -47,7 +47,25 @@
 	padding: 20px;
 }
 
+.joinMain div{
+	margin-bottom: 20px;
+}
+
+.joinMsgDiv{
+	font-size: 0.8rem;
+}
+
+#joinPwRuleMsg{
+	font-size: 0.8rem;
+	color: #949494;
+}
+
 .joinPhoneDiv input{
 	width: 60px; 
+}
+
+
+.joinEmailDiv input{
+	width: 100px;
 }
 

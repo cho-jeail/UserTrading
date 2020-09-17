@@ -8,10 +8,12 @@
 	<div class="loginMainDiv">
 		<form class="loginMainForm">
 			<div class="loginFormId">
-				<input type="text" name="userId" id="userId" class="userId" placeholder="아이디">
+				<label for="userId">아이디</label>
+				<input type="text" name="userId" id="userId" class="userId">
 			</div>
 			<div class="loginFormPw">
-				<input type="password" name="userPw" id="userPw" class="userPw" placeholder="비밀번호">
+				<label for="userPw">비밀번호</label>
+				<input type="password" name="userPw" id="userPw" class="userPw">
 			</div>
 				
 			<div class="loginSend">
@@ -37,6 +39,8 @@
 		
 	</div>
 </main>
+	
+<script type="text/javascript" src="${cpath }/js/login.js" ></script>
 	
 </body>
 </html>
