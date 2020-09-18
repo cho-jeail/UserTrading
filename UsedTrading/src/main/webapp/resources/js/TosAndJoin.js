@@ -50,29 +50,29 @@ function joinComfirm(){
 	cnt = 0;
 	for(i = 0; i < inputs.length; i++) {
 		if(inputs[i].value === '') {
-			inputs[i].style.border = '1px solid red';
+			inputs[i].style.borderBottom = '1px solid red';
 		}
 		else {
 			if(i === 0 && nameReg === false){
-				inputs[i].style.border = '1px solid red';
+				inputs[i].style.borderBottom = '1px solid red';
 			}
 			else if(i === 1 && idReg === false){
-				inputs[i].style.border = '1px solid red';
+				inputs[i].style.borderBottom = '1px solid red';
 			}
 			else if((i === 2 || i === 3) && (pwReg === false || pwChk === false)){
-				inputs[i].style.border = '1px solid red';
+				inputs[i].style.borderBottom = '1px solid red';
 			}
 			else if((i === 8 || i === 9) && (email1Reg === false || email2Reg === false)){
-				inputs[i].style.border = '1px solid red';
+				inputs[i].style.borderBottom = '1px solid red';
 			}
 			else{	
-				inputs[i].style.border = '1px solid black';
+				inputs[i].style.borderBottom = '1px solid black';
 				cnt++;
 			}
 		}
 	}
 	if(cnt !== inputs.length){
-		alert('빨간박스 확인 바랍니다');
+		alert('빨간 줄 확인 바랍니다');
 		return;	
 	}
 	document.getElementById('joinForm').submit();
@@ -81,13 +81,13 @@ function joinComfirm(){
 // 이름 정규 표현식
 function nameRegexp(){
 	const nameRegExp = /^[가-힣]{2,4}|[a-zA-Z]{2,10}\s[a-zA-Z]{2,10}$/;
-	if(nameRegExp.test(joinName.value) === false){
+	if(joinName.value !== '' && nameRegExp.test(joinName.value) === false){
 		document.getElementById('joinNameComfirmMsg').innerText = '잘못된 형식입니다.';
 		document.getElementById('joinNameComfirmMsg').style.color = 'red';
 		nameReg = false;
 	}
 	else{
-		joinName.style.border = '1px solid black';
+		joinName.style.borderBottom = '1px solid black';
 		document.getElementById('joinNameComfirmMsg').innerText = '';
 		nameReg = true;
 	}
@@ -96,14 +96,14 @@ function nameRegexp(){
 // 아이디 정규 표현식
 function idRegexp(){
 	const idRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z]){4,19}$/;
-	if(idRegExp.test(joinUserId.value) === false){
+	if(joinUserId.value !== '' && idRegExp.test(joinUserId.value) === false){
 		document.getElementById('joinIdComfirmMsg').innerText = '5~20자, 특수문자(- _ .)만 사용가능합니다.';
 		document.getElementById('joinIdComfirmMsg').style.color = 'red';
 		idReg = false;
 	}
 	else{
 		document.getElementById('joinIdComfirmMsg').innerText = '';
-		joinUserId.style.border = '1px solid black';
+		joinUserId.style.borderBottom = '1px solid black';
 		idReg = true;
 	}
 }
@@ -112,15 +112,20 @@ function idRegexp(){
 function passwordRegexp(){
 	const regExp1 = /^.*(?=^.{8,20}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
 	pw = joinUserPw.value;
-	if(regExp1.test(pw) === false){
+	if(pw !== '' && regExp1.test(pw) === false){
 		document.getElementById('joinPwComfirmMsg').innerText = '비밀번호 형식이 맞지 않습니다.'
 		document.getElementById('joinPwComfirmMsg').style.color = 'red';
+		pwReg = false;
+	}
+	else if(pw === ''){
+		document.getElementById('joinPwComfirmMsg').innerText = ''
+		joinUserPw.style.borderBottom = '1px solid black';
 		pwReg = false;
 	}
 	else{
 		document.getElementById('joinPwComfirmMsg').innerText = '사용가능합니다.'
 		document.getElementById('joinPwComfirmMsg').style.color = 'blue';
-		joinUserPw.style.border = '1px solid black';
+		joinUserPw.style.borderBottom = '1px solid black';
 		pwReg = true;
 	}
 }
@@ -140,7 +145,7 @@ function passwordCheck(){
 	else{
 		document.getElementById('joinCPwComfirmMsg').innerText = '일치합니다.'
 		document.getElementById('joinCPwComfirmMsg').style.color = 'blue';
-		joinComfirmPw.style.border = '1px solid black';
+		joinComfirmPw.style.borderBottom = '1px solid black';
 		pwChk = true;	
 	}
 }
@@ -148,13 +153,13 @@ function passwordCheck(){
 // 전화번호 확인
 function phoneNumberCheck(){
 	const regExp2 = /^[0-9]*$/;
-	if(regExp2.test(this.value) === false){
+	if(this.value !== '' && regExp2.test(this.value) === false){
 		document.getElementById('joinPhoneComfirmMsg').innerText = '숫자만 작성해 주세요.';
 		document.getElementById('joinPhoneComfirmMsg').style.color = 'red';
 	}
 	else{
 		document.getElementById('joinPhoneComfirmMsg').innerText = '';
-		this.style.border = '1px solid black';
+		this.style.borderBottom = '1px solid black';
 	}
 }
 
@@ -178,14 +183,14 @@ function selectOpts(){
 //이메일 정규표현식1
 function EmailCheck1(){
 	const regExp3 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])/i;
-	if(regExp3.test(joinEmail1.value) === false){
+	if(joinEmail1.value !== '' && regExp3.test(joinEmail1.value) === false){
 		document.getElementById('joinEmailComfirmMsg').innerText = '이메일 형식이 맞지 않습니다.'
 		document.getElementById('joinEmailComfirmMsg').style.color = 'red';
 		email1Reg = false;
 	}
 	else{
 		document.getElementById('joinEmailComfirmMsg').innerText = '';
-		joinEmail1.style.border = '1px solid black';
+		joinEmail1.style.borderBottom = '1px solid black';
 		email1Reg = true;
 	}
 }
@@ -193,14 +198,14 @@ function EmailCheck1(){
 //이메일 정규표현식2
 function EmailCheck2(){
 	const regExp4 = /^([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
-	if(regExp4.test(joinEmail2.value) === false){
+	if(joinEmail2.value !== '' && regExp4.test(joinEmail2.value) === false){
 		document.getElementById('joinEmailComfirmMsg').innerText = '이메일 형식이 맞지 않습니다.'
 		document.getElementById('joinEmailComfirmMsg').style.color = 'red';
 		mail2Reg = false;
 	}
 	else{
 		document.getElementById('joinEmailComfirmMsg').innerText = '';
-		joinEmail2.style.border = '1px solid black';
+		joinEmail2.style.borderBottom = '1px solid black';
 		mail2Reg = true;
 	}
 }

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
-
 <link href="${cpath }/css/TosAndJoin.css" rel="stylesheet" type="text/css">
 
 <main class="joinMain">
@@ -46,21 +45,25 @@
 		</div>
 		
 		<h4><label>전화번호</label></h4>
-		<div class="joinPhoneDiv">
-			<select id="FirstPnum"> 
-				<c:forEach var="i" begin="0" end="9">
-					<c:choose>
-						<c:when test="${i } == 0">
-							<option value="01 + ${i }" selected>01${i }</option>
-						</c:when>
-						<c:otherwise>
-							<option value="01 + ${i }">01${i }</option>
-						</c:otherwise>
-					</c:choose>
-				</c:forEach>
-			</select>-
-			<input type="text" name="joinPhone1" id="joinPhone1" class="joininput" maxlength="4" oninput="maxLengthCheck(this)">-
-			<input type="text" name="joinPhone2" id="joinPhone2" class="joininput" maxlength="4" oninput="maxLengthCheck(this)">
+		<div class="joinPhoneDiv" id="joinPhoneDiv">
+			<div class="joinPhoneDiv1">
+				<div id="FirstPnumDiv">
+					<select id="FirstPnum"> 
+						<c:forEach var="i" begin="0" end="9">
+							<c:choose>
+								<c:when test="${i } == 0">
+									<option value="01 + ${i }" selected>01${i }</option>
+								</c:when>
+								<c:otherwise>
+									<option value="01 + ${i }">01${i }</option>
+								</c:otherwise>
+							</c:choose>
+						</c:forEach>
+					</select>
+				</div>
+				<input type="text" name="joinPhone1" id="joinPhone1" class="joininput" maxlength="4" oninput="maxLengthCheck(this)">-
+				<input type="text" name="joinPhone2" id="joinPhone2" class="joininput" maxlength="4" oninput="maxLengthCheck(this)">
+			</div>
 			<div id="joinPhoneComfirmMsg" class="joinMsgDiv"></div>
 		</div>
 		
@@ -82,7 +85,9 @@
 			<input type="text" name="joinAddress" id="joinAddress" class="joininput">
 			<div id="joinAddComfirmMsg" class="joinMsgDiv"></div>
 		</div>
-		<input type="button" value="회원가입" onclick="joinComfirm()">
+		<div>
+			<input id="joinSubmitBtn" type="button" value="회원가입" onclick="joinComfirm()">
+		</div>
 	</form>
 </main>
 <script type="text/javascript" src="${cpath }/js/TosAndJoin.js" ></script>
