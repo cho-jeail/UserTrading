@@ -42,9 +42,7 @@
 	border: 1px solid black;
 }
 
-.loginFormId{
-	position: relative;
-}
+.loginFormId{ position: relative; }
 
 .loginFormId label{
 	position: absolute; 
@@ -75,6 +73,7 @@
 	line-height : normal; 
 	padding: .8em .5em;
 	border: none;
+	font-size: 1.0rem;
 	-webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
 	-moz-appearance: none; 
 	appearance: none;
@@ -85,6 +84,7 @@
 	height: 100%;
 	line-height : normal; 
 	padding: .8em .5em;
+	font-size: 1.0rem;
 	border: none;
 	-webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
 	-moz-appearance: none; 
@@ -102,9 +102,7 @@
 	height: 100%;
 }
 
-.saveUserIdDiv{
-	margin: 10px auto 10px 0;
-}
+.saveUserIdDiv{ margin: 10px auto 10px 0; }
 
 .searchIdPwAndJoin{
 	font-size: 0.8rem;
@@ -114,13 +112,9 @@
 	
 }
 
-.searchIdPwAndJoin a{
-	text-decoration: none;
-}
+.searchIdPwAndJoin a{ text-decoration: none; }
 
-.JoinDiv{
-	margin-left: 20px;
-}
+.JoinDiv{ margin-left: 20px; }
 
 
 
